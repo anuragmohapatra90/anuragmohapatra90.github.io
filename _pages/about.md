@@ -48,6 +48,6 @@ author_profile: true
     </p>
   </div>
   <div class="home-image">
-    <img src="/images/edugrid.jpg" alt="A photo representing your interests">
+    <img src="/images/edugrid.JPG" alt="A photo representing your interests">
   </div>
 </div>
