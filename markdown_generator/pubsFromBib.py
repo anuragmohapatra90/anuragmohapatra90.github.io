@@ -8,28 +8,21 @@ BIB_FILE = "publications.bib"
 OUTPUT_DIR = "../_publications/"
 
 # --- LaTeX Character Decoding ---
-# Dictionary to map LaTeX commands to Unicode characters
 LATEX_SUBS = {
-    r'\"o': 'ö', r'\"u': 'ü', r'\"a': 'ä',
-    r'\"O': 'Ö', r'\"U': 'Ü', r'\"A': 'Ä',
-    r"\'e": 'é', r"\`e": 'è', r'\ss': 'ß',
-    r'{\"o}': 'ö', r'{\"u}': 'ü', r'{\"a}': 'ä',
-    r'{\"O}': 'Ö', r'{\"U}': 'Ü', r'{\"A}': 'Ä',
-    r"{\'e}": 'é', r"{\`e}": 'è', r'{\ss}': 'ß',
+    r'\\"o': 'ö', r'\\"u': 'ü', r'\\"a': 'ä',
+    r'\\"O': 'Ö', r'\\"U': 'Ü', r'\\"A': 'Ä',
+    r"\\'e": 'é', r"\\`e": 'è', r'\\ss': 'ß',
+    r'{\\"o}': 'ö', r'{\\"u}': 'ü', r'{\\"a}': 'ä',
+    r'{\\"O}': 'Ö', r'{\\"U}': 'Ü', r'{\\"A}': 'Ä',
+    r"{\\'e}": 'é', r"{\\`e}": 'è', r'{\ss}': 'ß',
     r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
-    r'\ss': 'ß', r'{\ss}': 'ß',
-    r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
-    r'\&': '&;',
-    # Add more mappings here as needed
 }
 
 def decode_latex(text):
     """Replaces LaTeX special characters with their unicode equivalent."""
     for latex, unicode in LATEX_SUBS.items():
         text = text.replace(latex, unicode)
-    # Remove any remaining curly braces
-    text = text.replace("{", "").replace("}", "")
-    return text
+    return text.replace("{", "").replace("}", "")
 
 # --- Main Script ---
 parser = bibtex.Parser()
@@ -46,35 +39,20 @@ for bib_id in bibdata.entries:
         title = decode_latex(b.get("title", "No Title"))
         year = b.get("year", "N.A.")
         
-        # --- Author Formatting with LaTeX decoding ---
-        authors = []
-        if "author" in p:
-            for author in p["author"]:
-                first_name = decode_latex(" ".join(author.first_names))
-                last_name = decode_latex(" ".join(author.last_names))
-                initial = f"{first_name[0]}." if first_name else ""
-                authors.append(f"{initial} {last_name}")
-        authors_str = ", ".join(authors)
-
-        # --- Venue Formatting ---
+        authors = ", ".join([f"{decode_latex(author.first_names[0])}. {decode_latex(author.last_names[0])}" for author in p.get("author", [])])
+        
         venue = decode_latex(b.get('booktitle', b.get('journal', '')))
         
         # --- ROBUST URL FINDER ---
-        paper_url = ""
-        # Prioritize the 'url' field if it exists
-        if 'url' in b:
-            paper_url = b['url']
-        # Fallback to 'doi' field
-        elif 'doi' in b:
-            paper_url = "https://doi.org/" + b['doi']
-
-        # --- Build Recommended Citation ---
-        citation = f"{authors_str}. \"{title}\". <em>{venue}</em>, {year}."
+        paper_url = b.get('url', "https://doi.org/" + b.get('doi', '') if 'doi' in b else "")
 
         # --- Generate Filename ---
         safe_title = re.sub(r'[^a-zA-Z0-9_-]', '', title.replace(" ", "-"))[:50]
         md_filename = f"{year}-{safe_title}.md"
         permalink = f"/publication/{os.path.splitext(md_filename)[0]}"
+
+        # --- Logic for Manuscripts vs. Published Papers ---
+        is_under_review = "under review" in venue.lower() or "manuscript" in venue.lower()
 
         # --- Generate Page Content ---
         md_content = f"""---
@@ -84,15 +62,22 @@ permalink: {permalink}
 date: {year}-01-01
 ---
 <p style="font-size: 1.1em; margin-bottom: 0.5em;"><b>{html.escape(title)}</b></p>
-<p style="margin-bottom: 0.5em;">Published in <em>{html.escape(venue)}</em>, {year}</p>
 """
+        if is_under_review:
+            md_content += f'<p style="margin-bottom: 0.5em;"><em>Status: {html.escape(venue)}</em></p>\n'
+            citation = f"{authors}. \"{title}\". ({year})."
+        else:
+            md_content += f'<p style="margin-bottom: 0.5em;">Published in <em>{html.escape(venue)}</em>, {year}</p>\n'
+            # THIS IS THE CORRECTED LINE: The f-string is now properly terminated.
+            citation = f"{authors}. \"{title}\". <em>{html.escape(venue)}</em>, {year}."
+
         # --- Link Logic ---
         if paper_url:
             md_content += f'<p style="margin-bottom: 0.5em;"><a href="{paper_url}" target="_blank">Access paper here</a></p>\n'
         else:
             google_scholar_query = html.escape(title.replace(" ", "+"))
             md_content += f'<p style="margin-bottom: 0.5em;"><a href="https://scholar.google.com/scholar?q={google_scholar_query}" target="_blank">Search on Google Scholar</a></p>\n'
-
+        
         md_content += f'<p>Recommended citation: {citation}</p>'
 
         # --- Write the File ---
