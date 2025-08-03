@@ -1,107 +1,83 @@
-from pybtex.database.input import bibtex
-from time import strptime
-import html
 import os
 import re
+import html
+from time import strptime
+from pybtex.database.input import bibtex
 
-# Simplified configuration to process a single BibTeX file.
-publist = {
-    "publication": {
-        "file": "publications.bib",
-        "collection": {"name": "publications",
-                       "permalink": "/publication/"}
-    }
-}
+# --- Configuration ---
+BIB_FILE = "publications.bib"
+OUTPUT_DIR = "../_publications/"
 
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;"
-}
+# --- Main Script ---
+parser = bibtex.Parser()
+bibdata = parser.parse_file(BIB_FILE)
 
-def html_escape(text):
-    return "".join(html_escape_table.get(c, c) for c in text)
+# Ensure output directory exists
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Main processing loop
-for pubsource in publist:
-    parser = bibtex.Parser()
-    bibdata = parser.parse_file(publist[pubsource]["file"])
+for bib_id in bibdata.entries:
+    b = bibdata.entries[bib_id].fields
+    p = bibdata.entries[bib_id].persons
 
-    for bib_id in bibdata.entries:
-        b = bibdata.entries[bib_id].fields
+    try:
+        # --- Basic Info ---
+        title = b.get("title", "No Title").replace("{", "").replace("}", "")
+        year = b.get("year", "N.A.")
+
+        # --- Author Formatting: "S. Eichhorn, A. Mohapatra, C. Goebel" ---
+        authors = []
+        if "author" in p:
+            for author in p["author"]:
+                first_name = " ".join(author.first_names)
+                last_name = " ".join(author.last_names)
+                # Create initial like "S."
+                initial = f"{first_name[0]}."
+                authors.append(f"{initial} {last_name}")
+        authors_str = ", ".join(authors)
+
+        # --- Venue Formatting ---
+        venue = ""
+        if 'booktitle' in b:
+            venue = b['booktitle']
+        elif 'journal' in b:
+            venue = b['journal']
         
-        try:
-            # --- Basic Data Extraction ---
-            pub_year = b.get("year", "1900")
-            pub_month = b.get("month", "01")
-            pub_day = b.get("day", "01")
+        # --- URL / DOI ---
+        paper_url = b.get("url", b.get("doi", ""))
+        if paper_url and "doi.org" not in paper_url:
+             if "doi" in paper_url:
+                paper_url = "https://doi.org/" + paper_url.split("doi.org/")[-1]
 
-            # --- Date Formatting ---
-            if len(pub_month) < 3:
-                pub_month = "0" + pub_month
-                pub_month = pub_month[-2:]
-            else:
-                try:
-                    tmnth = strptime(pub_month[:3], '%b').tm_mon
-                    pub_month = f"{tmnth:02d}"
-                except ValueError:
-                    pub_month = "01" # Default if month name is not recognized
 
-            pub_date = f"{pub_year}-{pub_month}-{pub_day}"
+        # --- Build Recommended Citation String ---
+        citation = f"{authors_str}. \"{title}\". <em>{venue}</em>, {year}."
 
-            # --- Filename Generation ---
-            clean_title = b.get("title", "").replace("{", "").replace("}", "").replace("\\", "").replace(" ", "-")
-            url_slug = re.sub(r'[^a-zA-Z0-9_-]', '', clean_title)
-            md_filename = f"{pub_date}-{url_slug[:50]}.md".replace("--", "-")
+        # --- Generate Filename ---
+        safe_title = re.sub(r'[^a-zA-Z0-9_-]', '', title.replace(" ", "-"))[:50]
+        md_filename = f"{year}-{safe_title}.md"
 
-            # --- Citation Generation ---
-            authors = ""
-            if "author" in bibdata.entries[bib_id].persons:
-                for author in bibdata.entries[bib_id].persons["author"]:
-                    authors += f"{author.first_names[0]} {author.last_names[0]}, "
-            
-            citation = f"{authors.strip(', ')}. \"{html_escape(b.get('title', 'No Title'))}.\""
+        # --- Generate the ENTIRE HTML content for the page ---
+        html_content = f"""---
+title: "{html.escape(title)}"
+collection: publications
+permalink: /publication/{os.path.splitext(md_filename)[0]}
+date: {year}-01-01
+---
 
-            # --- Venue Logic (Robust) ---
-            venue = ""
-            if 'journal' in b:
-                venue = b['journal']
-            elif 'booktitle' in b:
-                venue = f"In {b['booktitle']}"
-            elif 'school' in b:
-                venue = b['school']
+<p style="font-size: 1.1em; margin-bottom: 0.5em;"><b>{html.escape(title)}</b></p>
+<p style="margin-bottom: 0.5em;">Published in <em>{html.escape(venue)}</em>, {year}</p>
+"""
+        if paper_url:
+            html_content += f'<p style="margin-bottom: 0.5em;"><a href="{paper_url}" target="_blank">Access paper here</a></p>\n'
+        
+        html_content += f'<p>Recommended citation: {citation}</p>'
 
-            if venue:
-                citation += f" <em>{html_escape(venue)}</em>, {pub_year}."
-            else:
-                citation += f" {pub_year}."
 
-            # --- Start YAML Front Matter ---
-            md = "---\n"
-            md += f"title: \"{html_escape(b.get('title', 'No Title'))}\"\n"
-            md += f"collection: {publist[pubsource]['collection']['name']}\n"
-            md += f"permalink: {publist[pubsource]['collection']['permalink']}{os.path.splitext(md_filename)[0]}\n"
-            md += f"date: {pub_date}\n"
-            
-            if venue:
-                md += f"venue: '{html_escape(venue)}'\n"
+        # --- Write the Markdown File ---
+        with open(os.path.join(OUTPUT_DIR, md_filename), 'w', encoding='utf-8') as f:
+            f.write(html_content)
 
-            if "url" in b:
-                md += f"paperurl: '{b['url']}'\n"
-            
-            md += f"citation: '{html_escape(citation)}'\n"
-            md += "---\n"
-            
-            # --- Main Content ---
-            md += f"\n[Download paper here]({b.get('url', '#')}){{:target='_blank'}}\n"
-            md += f"\nRecommended citation: {citation}\n"
+        print(f"SUCCESS: Processed '{title[:50]}...'")
 
-            # --- Write File ---
-            with open(f"../_publications/{md_filename}", 'w', encoding="utf-8") as f:
-                f.write(md)
-            
-            print(f'SUCCESSFULLY PARSED: {b.get("title", "NO TITLE")[:60]}')
-
-        except Exception as e:
-            print(f'ERROR processing {bib_id}: {e}')
-            continue
+    except Exception as e:
+        print(f"ERROR: Failed to process entry {bib_id}. Reason: {e}")
