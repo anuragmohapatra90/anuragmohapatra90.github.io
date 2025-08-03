@@ -8,6 +8,6 @@ date: 2024-12-11
 location: "Belgrade, Serbia"
 ---
 
-I will fill this later.
+We show that a standard inverter controller can become an M-Class Phasor Measurement Unit (PMU) with just a software update. This approach adds grid monitoring functions to existing hardware without needing extra wiring or instrumentation, using the controller's available processing power.
 
 [**Download Slides (PDF)**](/files/talks/PowerTech23_AM.pdf)
