@@ -57,43 +57,43 @@
   "teaching": [
     {
       "title": "Active Distribution Grids",
-	  "comment": "Lecture Course"
+	  "comment": "Lecture Course",
       "year": "2020-present"
     },
     {
       "title": "Decentralized Energy Systems",
-	  "comment": "Lab Course"
+	  "comment": "Lab Course",
       "year": "2018-present"
     }
   ],
   "projects": [
     {
       "title": "PhyLFlex",
-	  "comment": "BMWE"
+	  "comment": "BMWE",
       "year": "2025-present",
       "details": "Benchmarking home energy management systems in a real distribution grid."
     },    
 	{
       "title": "DirectGreenEnergy4Trains",
-	  "comment": "EFRE NRW"
+	  "comment": "EFRE NRW",
       "year": "2025-present",
       "details": "PHIL emulation of DERs for traction grid Virtual power plants."
     },
     {
       "title": "SHINE",
-	  "comment": "BMFTR"
+	  "comment": "BMFTR",
       "year": "2025-present",
       "details": "PHIL twin of a grid connected PEM-Electrolyser."
 	},
     {
       "title": "MCube ComfficientShare",
-	  "comment": "BMBF"
+	  "comment": "BMBF",
       "year": "2021-2024",
       "details": "Energy modeling of an efficient car-sharing concept in urban residential districts."
     },
     {
       "title": "Flexibly Configurable Microgrid Laboratory",
-	  "comment": "DFG"
+	  "comment": "DFG",
       "year": "2017-2019",
       "details": "Development and commissioning of the power grid and control systems."
     }
