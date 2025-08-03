@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Homepage Layout Styles
+   ========================================================================== */
+
+.home-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.home-text {
+  flex: 2; /* Allows text to take up more space */
+  min-width: 300px; /* Ensures text doesn't get too squished */
+  padding-right: 2em;
+}
+
+.home-image {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .home-section {
+    flex-direction: column;
+  }
+
+  .home-text {
+    padding-right: 0;
+    padding-bottom: 1.5em;
+  }
+}

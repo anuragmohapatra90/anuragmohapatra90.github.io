@@ -46,9 +46,9 @@ author_profile: true
   </div>
   
   <div class="research-section">
-    <h2>Accurate DER emulation on PHIL</h2>
+    <h2>Accurate renewable DER emulation on PHIL</h2>
     <p>
-      Heat pumps, Synchronous Machines, Battery Energy Storage Systems, Combined Heat and Power Plants, Electrolysers, Fuel Cells - How do we model these DERs on a PHIL amplifier to perform systems level validation with realistic DERs?
+      Heat pumps, Synchronous Machines, Battery Energy Storage Systems, Combined Heat and Power Plants, Electrolysers, Fuel Cells - How do we model these on a PHIL amplifier to perform systems level validation with realistic DERs?
     </p>
     <div class="media-container">
       <img src="/assets/img/research/project2/image1.jpg" alt="A single, wider image for project 2">
