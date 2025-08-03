@@ -1,22 +1,26 @@
 ---
 layout: single
 permalink: /
-title: ""
+title: " "
 author_profile: true
 ---
 
-<div class="home-section">
+<div class="home-section bio-section">
+
+  <h2>Biography</h2>
+
   <div class="profile-image-container">
     <img src="/images/Profile_header.jpeg" alt="A photo of Anurag Mohapatra">
   </div>
-  <div class="home-text" style="flex: 100%; padding-right: 0;">
-    <h2>Biography</h2>
+
+  <div class="home-text" style="padding-right: 0;">
     <p>
       I am a Research Group Leader at the Center of Combined Smart Energy Systems at the Technical University of Munich. My work focuses on the intersection of power systems, control theory, and data science to enable the transition to a fully renewable energy future.
       <br><br>
       I completed my PhD (Dr.-Ing.) with magna cum laude from TUM, where my thesis explored the design and application of a Power Hardware-in-the-Loop laboratory for active distribution grids. Before that, I worked as an Electrical Engineer at Rio Tinto in Western Australia.
     </p>
   </div>
+  
 </div>
 
 

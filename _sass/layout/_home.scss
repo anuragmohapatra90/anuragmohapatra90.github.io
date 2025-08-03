@@ -34,15 +34,22 @@
   }
 }
 
-/* New styles for the centered profile image */
+/* New, specific style for the Biography section layout */
+.bio-section {
+  flex-direction: column; /* Stacks items vertically */
+  align-items: flex-start; /* Aligns title to the left */
+}
+
+/* Style for the centered profile image */
 .profile-image-container {
-  text-align: center; 
-  margin-bottom: 1.5em; /* Adds space between the image and bio text */
+  width: 100%; /* Ensures the container takes full width */
+  text-align: center; /* Centers the image within the container */
+  margin: 1.5em 0; /* Adds space above and below the image */
 
   img {
-    max-width: 400px; 
-    width: 100%; 
-    border-radius: 7px; /* This creates a normal rectangle with soft corners */
+    max-width: 400px;
+    width: 100%;
+    border-radius: 7px; /* Soft rounded corners */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   }
 }
