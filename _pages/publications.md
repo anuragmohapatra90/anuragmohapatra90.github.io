@@ -34,33 +34,4 @@ author_profile: true
   </div>
 {% endfor %}
 
-<script>
-  function showYear(buttonElement, year) {
-    // Hide all publication panels
-    var allPanels = document.querySelectorAll('.pub-panel');
-    allPanels.forEach(function(panel) {
-      panel.style.display = 'none';
-    });
-
-    // Deactivate all buttons
-    var allButtons = document.querySelectorAll('.year-button');
-    allButtons.forEach(function(btn) {
-      btn.classList.remove('active');
-    });
-
-    // Show the target panel and activate the clicked button
-    var targetPanel = document.getElementById('panel-' + year);
-    if (targetPanel) {
-      targetPanel.style.display = 'block';
-    }
-    buttonElement.classList.add('active');
-  }
-
-  // Automatically show the content for the first (most recent) year
-  document.addEventListener('DOMContentLoaded', function() {
-    var firstButton = document.querySelector('.year-button');
-    if (firstButton) {
-      firstButton.click();
-    }
-  });
-</script>
+<script src="/assets/js/custom-scripts.js"></script>
