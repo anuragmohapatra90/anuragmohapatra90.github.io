@@ -17,6 +17,9 @@ LATEX_SUBS = {
     r'{\"O}': 'Ö', r'{\"U}': 'Ü', r'{\"A}': 'Ä',
     r"{\'e}": 'é', r"{\`e}": 'è', r'{\ss}': 'ß',
     r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
+    r'\ss': 'ß', r'{\ss}': 'ß',
+    r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
+    r'&': '&amp;',
     # Add more mappings here as needed
 }
 
