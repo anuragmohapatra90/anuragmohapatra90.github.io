@@ -20,9 +20,15 @@ author_profile: true
 </div>
 
 
-<div class="home-section">
-  <div class="home-text">
-    <h2>Center for Combined Smart Energy Systems (CoSES)</h2>
+<div class="home-section bio-section">
+
+  <h2>Center for Combined Smart Energy Systems (CoSES)</h2>
+
+  <div class="profile-image-container">
+    <img src="/images/coses.jpg" alt="A photo of the CoSES Laboratory">
+  </div>
+
+  <div class="home-text" style="padding-right: 0;">
     <p>
       CoSES is a unique laboratory which combines a real 1.5kms low voltage distribution grid with a small district heating network. The lab has five electrical and heat prosumers of both the programmable and commercial kind. It is as close as you can go to a field validation while remaining in a controlled lab environment.
       <br>
@@ -31,15 +37,19 @@ author_profile: true
       <a href="/files/CoSES_Lab_Overview.pdf" class="btn btn--info">Download Lab Overview (PDF)</a>
     </p>
   </div>
-  <div class="home-image">
-    <img src="/images/coses.jpg" alt="A photo of the CoSES Laboratory">
-  </div>
+
 </div>
 
 
-<div class="home-section">
-  <div class="home-text">
-    <h2>Interests</h2>
+<div class="home-section bio-section">
+
+  <h2>Interests</h2>
+
+  <div class="profile-image-container">
+    <img src="/images/edugrid.JPG" alt="A photo representing your interests">
+  </div>
+
+  <div class="home-text" style="padding-right: 0;">
     <p>
       I have always enjoyed teaching and breaking down complex ideas into basic analogies. I believe that the obsession with jargon, formulae, theorem gatekeeps the world of science to many children who are slow or late bloomers in their school days. Teachers worldwide are focusing on rote-learning versus explaining the metaphor behind a lesson.
       <br>
@@ -50,7 +60,5 @@ author_profile: true
       Beyond this, I have a passionate interest in the art of filmmaking and the hard science fiction.
     </p>
   </div>
-  <div class="home-image">
-    <img src="/images/edugrid.JPG" alt="A photo representing your interests">
-  </div>
+  
 </div>
