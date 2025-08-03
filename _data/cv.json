@@ -48,7 +48,7 @@
       "position": "Electrical Engineer",
       "company": "Rio Tinto Iron Ore, Western Australia",
       "year": "2012-2015",
-      "summary": "Electrical Engineer, Robe Valley Iron Ore Mine; Project Engineer, Rio Tinto Expansion Projects"
+      "summary": "Electrical Engineer, Robe Valley Iron Ore Mine <br> Project Engineer, Rio Tinto Expansion Projects"
     }
   ],
   "teaching": [
@@ -63,7 +63,7 @@
       "year": "2018-present"
     }
   ],
-  "projects": [
+  "current projects": [
     {
       "title": "PhyLFlex",
 	  "comment": "BMWE",
@@ -81,18 +81,6 @@
 	  "comment": "BMFTR",
       "year": "2025-present",
       "details": "PHIL twin of a grid connected PEM-Electrolyser."
-	},
-    {
-      "title": "MCube ComfficientShare",
-	  "comment": "BMBF",
-      "year": "2021-2024",
-      "details": "Energy modeling of an efficient car-sharing concept in urban residential districts."
-    },
-    {
-      "title": "Flexibly Configurable Microgrid Laboratory",
-	  "comment": "DFG",
-      "year": "2017-2019",
-      "details": "Development and commissioning of the power grid and control systems."
-    }
+	}
   ]
 }
