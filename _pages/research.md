@@ -41,7 +41,7 @@ author_profile: true
       We have so far looked into LSTM, Transformer and Temporal GNN approaches to predict peak and aggregated net demand at the transformer under total electrification with flexibiity through sector-coupling. Right now we are going towards a surrogate with far less input data requirements, while being suitable for most real grids in Germany.
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project2/image1.jpg" alt="A single, wider image for project 2">
+      <img src="/assets/img/research/project3/image1.jpg" alt="A single, wider image for project 2">
     </div>
   </div>
   
@@ -51,7 +51,7 @@ author_profile: true
       Heat pumps, Synchronous Machines, Battery Energy Storage Systems, Combined Heat and Power Plants, Electrolysers, Fuel Cells - How do we model these on a PHIL amplifier to perform systems level validation with realistic DERs?
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project2/image1.jpg" alt="A single, wider image for project 2">
+      <img src="/assets/img/research/project4/image1.jpg" alt="A single, wider image for project 2">
     </div>
   </div>
   
@@ -63,7 +63,7 @@ author_profile: true
       I am generally interested in any and all such ideas.
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project2/image1.jpg" alt="A single, wider image for project 2">
+      <img src="/assets/img/research/project5/image1.jpg" alt="A single, wider image for project 2">
     </div>
   </div>  
 
