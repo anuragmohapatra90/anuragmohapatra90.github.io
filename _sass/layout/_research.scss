@@ -3,15 +3,14 @@
    ========================================================================== */
 
 .research-container {
-  padding: 20px;
+  /* No padding needed here, the main layout handles it */
 }
 
 .research-section {
   margin-bottom: 40px;
-  border-bottom: 1px solid #ccc; /* Adds a line between sections */
+  border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
 
-  /* Removes the border from the last section */
   &:last-child {
     border-bottom: none;
     margin-bottom: 0;
@@ -32,15 +31,13 @@
 .media-container {
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
-  gap: 15px; /* Adds space between media items */
+  flex-wrap: wrap; /* This is key: allows images to wrap to the next line */
+  gap: 15px;       /* This creates a nice space between all images */
 }
 
-.media-container img,
-.media-container video {
-  max-width: 100%;
-  height: auto;
+.media-container img {
+  flex: 1 1 300px; /* This is the magic: each image will try to be 300px, but can grow or shrink. On a wide screen, you might get 3 in a row. On a narrow screen, they will stack. */
+  max-width: 100%;  /* Ensures images don't overflow their container */
+  height: auto;     /* Maintains aspect ratio */
   display: block;
-  margin-bottom: 10px;
-  flex: 1 1 300px; /* Allows items to grow and shrink */
 }
