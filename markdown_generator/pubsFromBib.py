@@ -19,7 +19,7 @@ LATEX_SUBS = {
     r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
     r'\ss': 'ß', r'{\ss}': 'ß',
     r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
-    r'&': '&amp;',
+    r'\&': '&;',
     # Add more mappings here as needed
 }
 
