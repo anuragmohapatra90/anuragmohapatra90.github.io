@@ -17,8 +17,8 @@
 }
 
 .home-text {
-  flex: 2; /* Allows text to take up more space */
-  min-width: 300px; /* Ensures text doesn't get too squished */
+  flex: 2;
+  min-width: 300px;
   padding-right: 2em;
 }
 
@@ -33,6 +33,20 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
+
+/* New styles for the centered profile image */
+.profile-image-container {
+  text-align: center; /* Centers the image */
+  margin-top: 1.5em; /* Adds space between bio text and image */
+
+  img {
+    max-width: 400px; /* Makes the image larger */
+    width: 100%; /* Ensures it's responsive */
+    border-radius: 50%; /* Makes the image circular - a modern touch! */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+}
+
 
 /* Responsive layout for smaller screens */
 @media screen and (max-width: 768px) {

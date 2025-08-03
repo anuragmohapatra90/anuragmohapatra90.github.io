@@ -1,19 +1,24 @@
 ---
 layout: single
 permalink: /
+title: "About Me"
 author_profile: true
-header:
-  image: /images/Profile_header.jpeg
-  image_description: "Profile photo of Anurag Mohapatra"
 ---
 
-## Biography
+<div class="home-section">
+  <div class="home-text" style="flex: 100%; padding-right: 0;">
+    <h2>Biography</h2>
+    <p>
+      Welcome! I am a Research Group Leader at the Center of Combined Smart Energy Systems at the Technical University of Munich. My work focuses on the intersection of power systems, control theory, and data science to enable the transition to a fully renewable energy future.
+      <br><br>
+      I completed my PhD (Dr.-Ing.) with magna cum laude from TUM, where my thesis explored the design and application of a Power Hardware-in-the-Loop laboratory for active distribution grids. Before that, I worked as an Electrical Engineer at Rio Tinto in Western Australia.
+    </p>
+  </div>
+  <div class="profile-image-container">
+    <img src="/images/profile.jpg" alt="A photo of Anurag Mohapatra">
+  </div>
+</div>
 
-Welcome! I am a Research Group Leader at the Center of Combined Smart Energy Systems at the Technical University of Munich. My work focuses on the intersection of power systems, control theory, and data science to enable the transition to a fully renewable energy future.
-
-I completed my PhD (Dr.--Ing.) with magna cum laude from TUM, where my thesis explored the design and application of a Power Hardware-in-the-Loop laboratory for active distribution grids. Before that, I worked as an Electrical Engineer at Rio Tinto in Western Australia.
-
----
 
 <div class="home-section">
   <div class="home-text">
@@ -28,6 +33,7 @@ I completed my PhD (Dr.--Ing.) with magna cum laude from TUM, where my thesis ex
     <img src="https://placehold.co/600x400/cccccc/ffffff?text=CoSES+Lab+Photo" alt="A photo of the CoSES Laboratory">
   </div>
 </div>
+
 
 <div class="home-section">
   <div class="home-text">
