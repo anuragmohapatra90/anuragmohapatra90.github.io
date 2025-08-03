@@ -1,152 +1,94 @@
 {
-  "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
-    "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
-    "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Earth",
-      "countryCode": "US",
-      "region": ""
-    },
-    "profiles": [
-      {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "http://orcid.org/yourorcidurl"
-      },
-      {
-        "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
-      }
-    ]
-  },
-  "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "degree": "PhD (Dr. -Ing.)",
+      "uni": "Technical University of Munich, Germany",
+      "year": "2018-2023",
+      "summary": "Magna cum laude, Title - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory"
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
+      "degree": "M.Sc. in Power Engineering",
+      "uni": "Technical University of Munich, Germany",
+      "year": "2015-2018",
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "degree": "B.Tech. in Electrical Engineering",
+      "uni": "National Institute of Technology, Rourkela, India",
+      "year": "2008-2012"
+    },
+    {
+      "degree": "High School Diploma",
+      "uni": "MGM English School, Rourkela, India",
+      "year": "2008"
     }
   ],
-  "skills": [],
-  "languages": [],
-  "interests": [],
-  "references": [],
-  "publications": [
+  "work": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "position": "Research Group Leader",
+      "company": "Technical University of Munich",
+      "year": "2024-present",
+      "summary": "Center of Combined Smart Energy Systems."
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "position": "Research Associate",
+      "company": "Technical University of Munich",
+      "year": "2018-2023",
+      "summary": "Center of Combined Smart Energy Systems."
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "position": "Student Research Assistant",
+      "company": "Technical University of Munich",
+      "year": "2017-2018",
+      "summary": "Chair of Renewable and Sustainable Energy Systems."
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
-    }
-  ],
-  "presentations": [
-    {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
-      "description": ""
+      "position": "Working Student",
+      "company": "Smartblue AG, Munich",
+      "year": "2016-2017",
+      "summary": "Open-source dataloggers for PV inverters."
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
-      "description": ""
-    },
-    {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
-      "description": ""
-    },
-    {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
-      "description": ""
+      "position": "Electrical Engineer",
+      "company": "Rio Tinto Iron Ore, Western Australia",
+      "year": "2012-2015",
+      "summary": "Electrical Engineer, Robe Valley Iron Ore Mine; Project Engineer, Rio Tinto Expansion Projects"
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
-      "description": ""
+      "title": "Active Distribution Grids (Master's Elective Module)",
+      "details": "2020-present"
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
-      "description": ""
+      "title": "Decentralized Energy Systems (Master's Lab Elective Module)",
+      "details": "2018-present"
     }
   ],
-  "portfolio": [
+  "projects": [
     {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+      "title": "PhyLFlex (BMWE)",
+      "year": "2025-present",
+      "details": "Benchmarking home energy management systems in a real distribution grid."
+    },    
+	{
+      "title": "DirectGreenEnergy4Trains (EFRE NRW)",
+      "year": "2025-present",
+      "details": "PHIL emulation of DERs for traction grid Virtual power plants."
+    },
+    {
+      "title": "SHINE (BMFTR)",
+      "year": "2025-present",
+      "details": "PHIL twin of a grid connected PEM-Electrolyser."
+	},
+    {
+      "title": "MCube ComfficientShare (BMFTR)",
+      "year": "2021-2024",
+      "details": "Energy modeling of an efficient car-sharing concept in urban residential districts."
+    },
+    {
+      "title": "Flexibly Configurable Microgrid Laboratory (DFG)",
+      "year": "2017-2019",
+      "details": "Development and commissioning of the power grid and control systems."
     }
   ]
 }
