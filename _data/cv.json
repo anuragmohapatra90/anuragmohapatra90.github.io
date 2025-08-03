@@ -4,7 +4,7 @@
       "degree": "PhD (Dr. -Ing.)",
       "uni": "Technical University of Munich, Germany",
       "year": "2018-2023",
-      "summary": "Magna cum laude, Title - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory"
+      "summary": "Thesis - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory (magna cum laude)"
     },
     {
       "degree": "M.Sc. in Power Engineering",
@@ -56,37 +56,44 @@
   ],
   "teaching": [
     {
-      "title": "Active Distribution Grids (Master's Elective Module)",
-      "details": "2020-present"
+      "title": "Active Distribution Grids",
+	  "comment": "Lecture Course"
+      "year": "2020-present"
     },
     {
-      "title": "Decentralized Energy Systems (Master's Lab Elective Module)",
-      "details": "2018-present"
+      "title": "Decentralized Energy Systems",
+	  "comment": "Lab Course"
+      "year": "2018-present"
     }
   ],
   "projects": [
     {
-      "title": "PhyLFlex (BMWE)",
+      "title": "PhyLFlex",
+	  "comment": "BMWE"
       "year": "2025-present",
       "details": "Benchmarking home energy management systems in a real distribution grid."
     },    
 	{
-      "title": "DirectGreenEnergy4Trains (EFRE NRW)",
+      "title": "DirectGreenEnergy4Trains",
+	  "comment": "EFRE NRW"
       "year": "2025-present",
       "details": "PHIL emulation of DERs for traction grid Virtual power plants."
     },
     {
-      "title": "SHINE (BMFTR)",
+      "title": "SHINE",
+	  "comment": "BMFTR"
       "year": "2025-present",
       "details": "PHIL twin of a grid connected PEM-Electrolyser."
 	},
     {
-      "title": "MCube ComfficientShare (BMFTR)",
+      "title": "MCube ComfficientShare",
+	  "comment": "BMBF"
       "year": "2021-2024",
       "details": "Energy modeling of an efficient car-sharing concept in urban residential districts."
     },
     {
-      "title": "Flexibly Configurable Microgrid Laboratory (DFG)",
+      "title": "Flexibly Configurable Microgrid Laboratory",
+	  "comment": "DFG"
       "year": "2017-2019",
       "details": "Development and commissioning of the power grid and control systems."
     }
