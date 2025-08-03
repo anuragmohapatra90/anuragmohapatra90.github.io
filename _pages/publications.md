@@ -5,6 +5,7 @@ title: "Publications"
 author_profile: true
 ---
 
+<!-- Style for the year buttons -->
 <style>
   .year-tabs button {
     background-color: #f1f1f1; border: none; padding: 10px 15px;
@@ -16,6 +17,7 @@ author_profile: true
   .pub-panel { display: none; }
 </style>
 
+<!-- Logic to group posts and create the HTML structure -->
 {% assign postsByYear = site.publications | group_by_exp:"post", "post.date | date: '%Y'" | reverse %}
 
 <div class="year-tabs">
@@ -34,4 +36,5 @@ author_profile: true
   </div>
 {% endfor %}
 
+<!-- This line loads your separate, reliable JavaScript file -->
 <script src="/assets/js/custom-scripts.js"></script>
