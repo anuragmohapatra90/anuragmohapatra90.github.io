@@ -15,7 +15,7 @@ author_profile: true
     </p>
   </div>
   <div class="profile-image-container">
-    <img src="/images/profile.jpg" alt="A photo of Anurag Mohapatra">
+    <img src="/images/Profile_header.jpeg" alt="A photo of Anurag Mohapatra">
   </div>
 </div>
 
