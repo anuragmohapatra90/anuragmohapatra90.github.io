@@ -7,22 +7,22 @@
       "summary": "Thesis - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory."
     },
     {
-      "degree": "M.Sc. in Power Engineering",
+      "degree": "M.Sc.",
       "uni": "Technical University of Munich, Germany",
       "year": "2015-2018",
-	  "summary": ""
+	  "summary": "Power Engineering"
     },
     {
-      "degree": "B.Tech. in Electrical Engineering",
+      "degree": "B.Tech",
       "uni": "National Institute of Technology, Rourkela, India",
       "year": "2008-2012",
-	  "summary": ""
+	  "summary": "Electrical Engineering"
     },
     {
       "degree": "High School Diploma",
       "uni": "MGM English School, Rourkela, India",
       "year": "2008",
-	  "summary": ""
+	  "summary": "Indian School Certificate Examination (ICSE)"
     }
   ],
   "work": [
@@ -55,12 +55,15 @@
     {
       "title": "Active Distribution Grids",
 	  "comment": "Lecture Course",
-      "year": "2020-present"
+      "year": "2020-present",
+	  "summary": " "
     },
     {
       "title": "Decentralized Energy Systems",
 	  "comment": "Lab Course",
-      "year": "2018-present"
+      "year": "2018-present",
+	  "summary": " "
+	  
     }
   ],
   "current projects": [
