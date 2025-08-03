@@ -1,6 +1,8 @@
 ---
-layout: default
-title: Research
+layout: single
+permalink: /research/
+title: "Research Interests"
+author_profile: true
 ---
 
 <div class="research-container">
