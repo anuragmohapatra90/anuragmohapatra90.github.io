@@ -7,7 +7,6 @@ author_profile: true
 
 <div class="home-section bio-section">
 
-  <h2>Biography</h2>
 
   <div class="profile-image-container">
     <img src="/images/Profile_header.jpeg" alt="A photo of Anurag Mohapatra">
@@ -34,7 +33,7 @@ author_profile: true
     </p>
   </div>
   <div class="home-image">
-    <img src="https://placehold.co/600x400/cccccc/ffffff?text=CoSES+Lab+Photo" alt="A photo of the CoSES Laboratory">
+    <img src="/images/coses.jpg" alt="A photo of the CoSES Laboratory">
   </div>
 </div>
 
@@ -49,6 +48,6 @@ author_profile: true
     </p>
   </div>
   <div class="home-image">
-    <img src="https://placehold.co/600x400/cccccc/ffffff?text=Interests+Photo" alt="A photo representing your interests">
+    <img src="/images/edugrid.jpg" alt="A photo representing your interests">
   </div>
 </div>
