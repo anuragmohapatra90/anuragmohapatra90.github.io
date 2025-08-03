@@ -1,0 +1,46 @@
+/* ==========================================================================
+   Research Page Layout
+   ========================================================================== */
+
+.research-container {
+  padding: 20px;
+}
+
+.research-section {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ccc; /* Adds a line between sections */
+  padding-bottom: 20px;
+
+  /* Removes the border from the last section */
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.research-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.research-section p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.media-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line on small screens */
+  gap: 15px; /* Adds space between media items */
+}
+
+.media-container img,
+.media-container video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  flex: 1 1 300px; /* Allows items to grow and shrink */
+}
