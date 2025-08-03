@@ -21,7 +21,7 @@ author_profile: true
       <p class="page__meta" style="margin: 0;">{{ item.uni }} | {{ item.year }}</p>
     {% else %}
        <h3 style="margin-bottom: 0.2em; font-size: 1.1em;"><b>{{ item.title }}</b></h3>
-	   <p class="page__meta" style="margin: 0;">{{ item.uni }} | {{ item.year }}</p>
+	   <p class="page__meta" style="margin: 0;">{{ item.comment }} | {{ item.year }}</p>
     {% endif %}
     
     {% if item.summary %}
