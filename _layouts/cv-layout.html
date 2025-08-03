@@ -1,39 +1,54 @@
 ---
-layout: compress
+layout: archive
 ---
 
-{% include base_path %}
+{{ content }}
 
-<!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %} | {{ site.name | default: site.title }}</title>
-    {% include head.html %}
-    {% include head/custom.html %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/cv-layout.css">
-  </head>
-
-  <body class="cv-layout">
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
-
-    <div id="main" role="main">
-      <div class="container">
-        {{ content }}
+<div class="grid__wrapper">
+  {% for item in site.data.cv %}
+    {% if item.education %}
+      <div class="grid__item">
+        <h2 class="archive__item-title">Education</h2>
+        {% for entry in item.education %}
+          <div class="archive__item-teaser">
+            <h3 class="archive__item-title" itemprop="headline">{{ entry.degree }}</h3>
+            <p class="page__meta">{{ entry.uni }} | {{ entry.year }}</p>
+            <p class="archive__item-excerpt">{{ entry.summary }}</p>
+          </div>
+        {% endfor %}
       </div>
-    </div>
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
-</html>
+    {% elsif item.work %}
+      <div class="grid__item">
+        <h2 class="archive__item-title">Work Experience</h2>
+        {% for entry in item.work %}
+          <div class="archive__item-teaser">
+            <h3 class="archive__item-title" itemprop="headline">{{ entry.position }}</h3>
+            <p class="page__meta">{{ entry.company }} | {{ entry.year }}</p>
+            <p class="archive__item-excerpt">{{ entry.summary }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% elsif item.teaching %}
+      <div class="grid__item">
+        <h2 class="archive__item-title">Teaching</h2>
+        {% for entry in item.teaching %}
+          <div class="archive__item-teaser">
+            <h3 class="archive__item-title" itemprop="headline">{{ entry.title }}</h3>
+            <p class="archive__item-excerpt">{{ entry.details }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% elsif item.projects %}
+      <div class="grid__item">
+        <h2 class="archive__item-title">Projects</h2>
+        {% for entry in item.projects %}
+          <div class="archive__item-teaser">
+            <h3 class="archive__item-title" itemprop="headline">{{ entry.title }}</h3>
+            <p class="page__meta">{{ entry.year }}</p>
+            <p class="archive__item-excerpt">{{ entry.details }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
