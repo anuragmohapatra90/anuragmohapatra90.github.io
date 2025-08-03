@@ -3,23 +3,26 @@
     {
       "degree": "PhD (Dr. -Ing.)",
       "uni": "Technical University of Munich, Germany",
-      "year": "2018-2023",
-      "summary": "Thesis - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory (magna cum laude)"
+      "year": "2018-2023 (magna cum laude)",
+      "summary": "Thesis - Theory to Practice: Design, Integration and Applications for an Active Distribution Grid Laboratory."
     },
     {
       "degree": "M.Sc. in Power Engineering",
       "uni": "Technical University of Munich, Germany",
       "year": "2015-2018",
+	  "summary": ""
     },
     {
       "degree": "B.Tech. in Electrical Engineering",
       "uni": "National Institute of Technology, Rourkela, India",
-      "year": "2008-2012"
+      "year": "2008-2012",
+	  "summary": ""
     },
     {
       "degree": "High School Diploma",
       "uni": "MGM English School, Rourkela, India",
-      "year": "2008"
+      "year": "2008",
+	  "summary": ""
     }
   ],
   "work": [
@@ -40,12 +43,6 @@
       "company": "Technical University of Munich",
       "year": "2017-2018",
       "summary": "Chair of Renewable and Sustainable Energy Systems."
-    },
-    {
-      "position": "Working Student",
-      "company": "Smartblue AG, Munich",
-      "year": "2016-2017",
-      "summary": "Open-source dataloggers for PV inverters."
     },
     {
       "position": "Electrical Engineer",
