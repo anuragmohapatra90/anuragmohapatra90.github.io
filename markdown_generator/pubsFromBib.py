@@ -10,12 +10,12 @@ OUTPUT_DIR = "../_publications/"
 # --- LaTeX Character Decoding ---
 # Dictionary to map LaTeX commands to Unicode characters
 LATEX_SUBS = {
-    r'\\"o': 'ö', r'\\"u': 'ü', r'\\"a': 'ä',
-    r'\\"O': 'Ö', r'\\"U': 'Ü', r'\\"A': 'Ä',
-    r"\\'e": 'é', r"\\`e": 'è', r'\\ss': 'ß',
-    r'{\\"o}': 'ö', r'{\\"u}': 'ü', r'{\\"a}': 'ä',
-    r'{\\"O}': 'Ö', r'{\\"U}': 'Ü', r'{\\"A}': 'Ä',
-    r"{\\'e}": 'é', r"{\\`e}": 'è', r'{\\ss}': 'ß',
+    r'\"o': 'ö', r'\"u': 'ü', r'\"a': 'ä',
+    r'\"O': 'Ö', r'\"U': 'Ü', r'\"A': 'Ä',
+    r"\'e": 'é', r"\`e": 'è', r'\ss': 'ß',
+    r'{\"o}': 'ö', r'{\"u}': 'ü', r'{\"a}': 'ä',
+    r'{\"O}': 'Ö', r'{\"U}': 'Ü', r'{\"A}': 'Ä',
+    r"{\'e}": 'é', r"{\`e}": 'è', r'{\ss}': 'ß',
     r'{\c{c}}': 'ç', r'{\c{s}}': 'ş',
     # Add more mappings here as needed
 }
