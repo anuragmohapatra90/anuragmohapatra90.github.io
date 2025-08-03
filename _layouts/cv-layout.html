@@ -5,50 +5,30 @@ layout: archive
 {{ content }}
 
 <div class="grid__wrapper">
-  {% for item in site.data.cv %}
-    {% if item.education %}
+  {%- for section in site.data.cv -%}
+    {%- for section_data in section -%}
       <div class="grid__item">
-        <h2 class="archive__item-title">Education</h2>
-        {% for entry in item.education %}
+        <h2 class="archive__item-title">{{ section_data[0] | capitalize }}</h2>
+        {%- for entry in section_data[1] -%}
           <div class="archive__item-teaser">
-            <h3 class="archive__item-title" itemprop="headline">{{ entry.degree }}</h3>
-            <p class="page__meta">{{ entry.uni }} | {{ entry.year }}</p>
-            <p class="archive__item-excerpt">{{ entry.summary }}</p>
+            {%- if entry.position -%}
+              <h3 class="archive__item-title" itemprop="headline">{{ entry.position }}</h3>
+              <p class="page__meta">{{ entry.company }} | {{ entry.year }}</p>
+            {%- elsif entry.degree -%}
+              <h3 class="archive__item-title" itemprop="headline">{{ entry.degree }}</h3>
+              <p class="page__meta">{{ entry.uni }} | {{ entry.year }}</p>
+            {%- else -%}
+              <h3 class="archive__item-title" itemprop="headline">{{ entry.title }}</h3>
+            {%- endif -%}
+
+            {%- if entry.summary -%}
+              <p class="archive__item-excerpt">{{ entry.summary }}</p>
+            {%- elsif entry.details -%}
+               <p class="archive__item-excerpt">{{ entry.details }}</p>
+            {%- endif -%}
           </div>
-        {% endfor %}
+        {%- endfor -%}
       </div>
-    {% elsif item.work %}
-      <div class="grid__item">
-        <h2 class="archive__item-title">Work Experience</h2>
-        {% for entry in item.work %}
-          <div class="archive__item-teaser">
-            <h3 class="archive__item-title" itemprop="headline">{{ entry.position }}</h3>
-            <p class="page__meta">{{ entry.company }} | {{ entry.year }}</p>
-            <p class="archive__item-excerpt">{{ entry.summary }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% elsif item.teaching %}
-      <div class="grid__item">
-        <h2 class="archive__item-title">Teaching</h2>
-        {% for entry in item.teaching %}
-          <div class="archive__item-teaser">
-            <h3 class="archive__item-title" itemprop="headline">{{ entry.title }}</h3>
-            <p class="archive__item-excerpt">{{ entry.details }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% elsif item.projects %}
-      <div class="grid__item">
-        <h2 class="archive__item-title">Projects</h2>
-        {% for entry in item.projects %}
-          <div class="archive__item-teaser">
-            <h3 class="archive__item-title" itemprop="headline">{{ entry.title }}</h3>
-            <p class="page__meta">{{ entry.year }}</p>
-            <p class="archive__item-excerpt">{{ entry.details }}</p>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-  {% endfor %}
+    {%- endfor -%}
+  {%- endfor -%}
 </div>
