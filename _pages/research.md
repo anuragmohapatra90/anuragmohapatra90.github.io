@@ -90,7 +90,7 @@ author_profile: true
     </p>
     <div class="media-container">
       <figure>
-        <img src="/images/research/project5/image1.JPG" alt="Image for interdisciplinary research">
+        <img src="/images/research/project5/image1.jpg" alt="Image for interdisciplinary research">
         <figcaption><a href="https://www.mep.tum.de/mep/aktuelles/news-single-view/article/einweihung-des-neuen-schuelerlabors/" target="_blank">Fig 1. The energy lab for school students in TUM. </a></figcaption>
       </figure>
 	  <figure>
