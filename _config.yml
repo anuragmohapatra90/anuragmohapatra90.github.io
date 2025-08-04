@@ -7,16 +7,15 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default"
-title                    : "Anurag Mohapatra | TU Munich"
-title_separator          : ""
-name                     : "Anurag Mohapatra"
-description              : "Research Group Leader, CoSES"
-url                      : https://anuragmohapatra90.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-#repository               : "academicpages/academicpages.github.io"
-avatar                   : "/images/profile.jpg"
+locale: "en-US"
+site_theme: "default"
+title: "Anurag Mohapatra | TU Munich"
+title_separator: ""
+name: "Anurag Mohapatra"
+description: 'Personal website of Dr. Anurag Mohapatra, Research Group Leader for CoSES at the Technical University of Munich.'
+url: "https://anuragmohapatra90.github.io"
+baseurl: ""
+avatar: "/images/profile.jpg"
 
 
 
