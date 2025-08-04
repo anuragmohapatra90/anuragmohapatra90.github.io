@@ -31,9 +31,9 @@ author_profile: true
     <p>
       CoSES is a unique laboratory which combines a real 1.5 km low voltage(LV) distribution grid with a small district heating network. The lab has five electrical and heat prosumers of both the programmable and commercial kind. It is as far as you can go to a field validation while remaining in a controlled lab environment.
       <br>
-      I was responsible for the commissioning of the distributed control system - spread over six embedded targets for the electrical grid. I also focused on real-time programming framework for the laboratory and commissioning of our 7 Power Hardware in the loop(PHIL) emulators. 
+      I was responsible for the commissioning of the distributed control system - spread over six embedded targets for the electrical grid. I also focused on real-time programming framework for the laboratory and commissioning of our seven Power Hardware in the loop(PHIL) emulators. 
 	  <br>
-	  Today, I am always excited to convert a new theoretical contribution in LV grid control or operation into its equivalent PHIL experiment - thus bringing the idea closer to reality. Have a look what CoSES can do by checking our general slide deck below.
+	  I am always excited to convert a new theoretical contribution in LV grid control or operation into its equivalent PHIL experiment - thus bringing the idea closer to reality. Have a look what CoSES can do by checking our general slide deck below.
       <br><br>
       <a href="/files/CoSES_Lab_Overview.pdf" class="btn btn--info">Download Lab Overview (PDF)</a>
     </p>
