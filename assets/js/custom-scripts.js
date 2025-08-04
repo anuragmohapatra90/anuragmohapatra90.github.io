@@ -17,6 +17,7 @@ function showYear(buttonElement, year) {
   buttonElement.classList.add('active');
 }
 
+
 // This single function runs after the entire page is loaded
 document.addEventListener('DOMContentLoaded', function() {
   
@@ -27,13 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // --- DEFINITIVE FIX for Navigation Bar External Links ---
-  // We add a small delay to ensure the menu is built before our script runs.
+  // This waits a brief moment to ensure the whole page, including the navigation, is fully built.
   setTimeout(function() {
     var navLinks = document.querySelectorAll('.masthead__menu-item a');
     navLinks.forEach(function(link) {
-      if (link.href && link.href.includes('http')) { // A simpler check for any external link
+      // A simple check to see if a link is external
+      if (link.href && (link.href.startsWith('http://') || link.href.startsWith('https://')) && !link.href.includes('anuragmohapatra90.github.io')) {
         link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
+        link.setAttribute('rel', 'noopener noreferrer'); // Important for security
       }
     });
   }, 500); // 500ms delay
