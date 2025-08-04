@@ -15,9 +15,14 @@ author_profile: true
       I am interested in setting up accurate, reproducible and comprehensive experiment setups to validate these methodologies in my PHIL laboratory.
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project1/image1.jpg" alt="Image 1 of project 1">
-      <img src="/assets/img/research/project1/image2.jpg" alt="Image 2 of project 1">
-      <img src="/assets/img/research/project1/image3.jpg" alt="Image 3 of project 1">
+      <figure>
+        <img src="/images/research/project1/image1.jpg" alt="Image 1 of project 1">
+        <figcaption><a href="https://arxiv.org/abs/2507.02325" target="_blank">Fig 1. PHIL setup from Graf. et al., 2025.</a></figcaption>
+      </figure>
+      <figure>
+        <img src="/images/research/project1/image2.jpg" alt="Image 2 of project 1">
+        <figcaption><a href="https://dl.acm.org/doi/pdf/10.1145/3679240.3734622" target="_blank">Fig 2. Physics inspired Symbolic Regression vs Power flow models from Eichhorn et al., 2025.</a></figcaption>
+      </figure>
     </div>
   </div>
 
@@ -30,7 +35,14 @@ author_profile: true
       In our research project, PhyLFlex, we are partnering with the HAW Landshut, a local grid operator in Bayern and Siemens to benchmark different HEMS in the CoSES lab and demonstrate their efficacy in a field test. <br>
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project2/image1.jpg" alt="A single, wider image for project 2">
+       <figure>
+        <img src="/images/research/project2/image1.jpg" alt="Image 1 of project 2">
+        <figcaption><a href="https://www.haw-landshut.de/aktuelles/beitrag/ki-trifft-physik" target="_blank">Fig 1. The PhyLFlex consortium.</a></figcaption>
+      </figure>
+	         <figure>
+        <img src="/images/research/project2/image2.jpg" alt="Image 2 of project 2">
+        <figcaption><a href="https://www.linkedin.com/posts/coses-research_mit-unserem-1-hems-symposium-haben-wir-viele-activity-7245445984506306560-jghg/" target="_blank">Fig 2. Annual HEMS Symposium in TUM since 2024.</a></figcaption>
+      </figure>
     </div>
   </div>
   
@@ -41,7 +53,14 @@ author_profile: true
       We have so far looked into LSTM, Transformer and Temporal GNN approaches to predict peak and aggregated net demand at the transformer under total electrification with flexibiity through sector-coupling. Right now we are going towards a surrogate with far less input data requirements, while being suitable for most real grids in Germany.
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project3/image1.jpg" alt="A single, wider image for project 2">
+       <figure>
+        <img src="/images/research/project3/image1.jpg" alt="Image for surrogates project">
+        <figcaption><a href=" " target="_blank">Fig 1. Typical Tx Grid and downstrean ADG for expansion planning problems (Mohapatra et al., 2025).</a></figcaption>
+      </figure>
+	  <figure>
+        <img src="/images/research/project3/image2.jpg" alt="Image for surrogates project">
+        <figcaption><a href=" " target="_blank">Fig 2. Pre-processing GNN surrogates from Pjetri et al., 2025. </a></figcaption>
+      </figure>
     </div>
   </div>
   
@@ -51,7 +70,14 @@ author_profile: true
       Heat pumps, Synchronous Machines, Battery Energy Storage Systems, Combined Heat and Power Plants, Electrolysers, Fuel Cells - How do we model these on a PHIL amplifier to perform systems level validation with realistic DERs?
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project4/image1.jpg" alt="A single, wider image for project 2">
+	  <figure>
+        <img src="/images/research/project4/image1.jpg" alt="Image for PHIL project">
+        <figcaption><a href="https://www.sciencedirect.com/science/article/pii/S0378779624006400" target="_blank">Fig 1. PHIL Air-source heat pump from Song et al., 2024. </a></figcaption>
+      </figure>
+	  <figure>
+        <img src="/images/research/project4/image2.jpg" alt="Image for PHIL project">
+        <figcaption><a href="https://mediatum.ub.tum.de/doc/1726262/1726262.pdf" target="_blank">Fig 2. PHIL synchronous machine from Mohapatra, 2024 (PhD. Thesis). </a></figcaption>
+      </figure>
     </div>
   </div>
   
@@ -63,7 +89,14 @@ author_profile: true
       I am generally interested in any and all such ideas.
     </p>
     <div class="media-container">
-      <img src="/assets/img/research/project5/image1.jpg" alt="A single, wider image for project 2">
+      <figure>
+        <img src="/images/research/project5/image1.JPG" alt="Image for interdisciplinary research">
+        <figcaption><a href="https://www.mep.tum.de/mep/aktuelles/news-single-view/article/einweihung-des-neuen-schuelerlabors/" target="_blank">Fig 1. The energy lab for school students in TUM. </a></figcaption>
+      </figure>
+	  <figure>
+        <img src="/images/research/project5/image2.jpg" alt="Image for interdisciplinary research">
+        <figcaption><a href="https://forschungscampus-garching.de/" target="_blank">Fig 2. CoSES exhibits for the campus open door day. </a></figcaption>
+      </figure>
     </div>
   </div>  
 
