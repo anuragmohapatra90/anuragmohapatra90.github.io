@@ -35,7 +35,7 @@ author_profile: true
 	  <br>
 	  I am always excited to convert a new theoretical contribution in LV grid control or operation into its equivalent PHIL experiment - thus bringing the idea closer to reality. Have a look what CoSES can do by checking our general slide deck below.
       <br><br>
-      <a href="/files/CoSES_Lab_Overview.pdf" class="btn btn--info">Download Lab Overview (PDF)</a>
+      <a href="/files/CoSES_General_Deck.pdf" class="btn btn--info">Download Lab Overview (PDF)</a>
     </p>
   </div>
 
