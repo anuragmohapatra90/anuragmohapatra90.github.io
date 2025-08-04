@@ -31,7 +31,7 @@ author_profile: true
     <p>
       Total decarbonisation of Germany will lead to manifold increase in peak electrical demand. This requires an extremely expensive grid reinforcement. But nobody produces as many transformers as we need - right now! We need ways to slow down the need to reinforce grids. <br>
       HEMS in every household with PV, EV chargers and Heat pumps can use the sector-coupling flexibiity and reduce the peak load at the transformer. <br>
-      But which <em>algorithm</em> is the best? How do we combine these with <em>smart meters and iMsys</em>? Can there be a way to combine <em>profit making with grid stabilising</em> behaviour?. <br>
+      But which <em>algorithm</em> is the best? How do we combine these with <em>smart meters and iMsys</em>? Can there be a way to combine <em>profit making with grid stabilising</em> behaviour? <br>
       In our research project, PhyLFlex, we are partnering with the HAW Landshut, a local grid operator in Bayern and Siemens to benchmark different HEMS in the CoSES lab and demonstrate their efficacy in a field test. <br>
     </p>
     <div class="media-container">
