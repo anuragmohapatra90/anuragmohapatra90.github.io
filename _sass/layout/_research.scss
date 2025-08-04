@@ -1,44 +1,52 @@
 /* ==========================================================================
-   Research Page Layout
+   Research Page Layout (Corrected)
    ========================================================================== */
 
-.research-container {
-  /* No padding needed here, the main layout handles it */
-}
-
 .research-section {
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2em;
 
   &:last-child {
     border-bottom: none;
     margin-bottom: 0;
-    padding-bottom: 0;
   }
 }
 
 .research-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 1.5em; /* Using em for better scalability */
+  margin-bottom: 0.5em;
 }
 
 .research-section p {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.6;
 }
 
+/* This is the key change for the image grid */
 .media-container {
-  margin-top: 20px;
+  margin-top: 1.5em;
   display: flex;
-  flex-wrap: wrap; 
-  gap: 15px;      
-}
+  flex-wrap: wrap;
+  gap: 1em; /* Controls the space between images */
 
-.media-container img {
-  /* THIS IS THE CORRECTED LINE */
-  flex: 1 1 45%;   /* Each image takes up ~45% of the width, allowing two per row */
-  max-width: 100%;  
-  height: auto;     
-  display: block;
+  figure {
+    /* Each image figure will try to take up ~48% of the width */
+    flex: 1 1 48%; 
+    min-width: 250px; /* Prevents images from becoming too small before wrapping */
+    margin: 0; /* Resets default figure margin */
+    
+    img {
+      width: 100%; /* Image fills its container */
+      height: auto;
+      display: block;
+      border-radius: 7px; /* Optional: adds soft corners */
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      margin-top: 0.5em;
+      color: #666;
+    }
+  }
 }
