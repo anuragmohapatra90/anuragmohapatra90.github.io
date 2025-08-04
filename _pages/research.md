@@ -12,7 +12,7 @@ author_profile: true
     <p>
       No grid models because <em>critical infrastructure</em>. Barely any measurements because <em>data protection and privacy</em>. Not just an electrical grid because <em>sector coupling</em>. Transformer loaded to both extremes because <em>high penetration of PV, car chargers and heat pumps</em>.<br>
       How can we optimally control and operate such active distribution grids? My collaborators have looked into this problem from the perspective of data-driven state estimation, feedback optimization, reinforcement learning, data-driven predictive control and symbolic regression. <br>
-      I am interested in setting up accurate, reproducible and comprehensive experiment setups to validate these methodologies in my PHIL laboratory.
+      I am interested in setting up accurate, reproducible and comprehensive experiments to validate these methodologies in my PHIL laboratory.
     </p>
     <div class="media-container">
       <figure>
