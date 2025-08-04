@@ -14,7 +14,7 @@
 }
 
 .research-section h2 {
-  font-size: 1.5em; /* Using em for better scalability */
+  font-size: 1.5em;
   margin-bottom: 0.5em;
 }
 
@@ -23,24 +23,23 @@
   line-height: 1.6;
 }
 
-/* This is the key change for the image grid */
 .media-container {
   margin-top: 1.5em;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em; /* Controls the space between images */
+  gap: 1em;
+  align-items: flex-end; /* This is the new line that fixes the alignment */
 
   figure {
-    /* Each image figure will try to take up ~48% of the width */
     flex: 1 1 48%; 
-    min-width: 250px; /* Prevents images from becoming too small before wrapping */
-    margin: 0; /* Resets default figure margin */
+    min-width: 250px;
+    margin: 0;
     
     img {
-      width: 100%; /* Image fills its container */
+      width: 100%;
       height: auto;
       display: block;
-      border-radius: 7px; /* Optional: adds soft corners */
+      border-radius: 7px;
     }
 
     figcaption {
