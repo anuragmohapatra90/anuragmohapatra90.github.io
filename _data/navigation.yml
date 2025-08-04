@@ -15,7 +15,8 @@ main:
     url: /publications/
   - title: "Talks"
     url: /talks/
-  - title: '<a href="http://edu-grid.org" target="_blank">EduGrid</a>'
+  - title: "EduGrid"
+    url: http://edu-grid.org
   - title: "CV"
     url: /cv/
   - title: "Blog"

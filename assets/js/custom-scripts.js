@@ -1,3 +1,4 @@
+// Function to handle the interactive year tabs on the publications page
 function showYear(buttonElement, year) {
   // Hide all publication panels
   var allPanels = document.querySelectorAll('.pub-panel');
@@ -19,11 +20,24 @@ function showYear(buttonElement, year) {
   buttonElement.classList.add('active');
 }
 
-// This function runs after the entire page is loaded
+
+// This single function runs after the entire page is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Automatically "click" the first year button to show its content by default
-  var firstButton = document.querySelector('.year-button');
-  if (firstButton) {
-    firstButton.click();
+  
+  // --- Logic for the Publications Page Year Tabs ---
+  var firstPubButton = document.querySelector('.year-button');
+  if (firstPubButton) {
+    firstPubButton.click(); // Automatically "click" the first year button
   }
+
+  // --- Logic for the Navigation Bar External Links ---
+  var navLinks = document.querySelectorAll('.masthead__menu-item a');
+  navLinks.forEach(function(link) {
+    // Check if the link is external
+    if (link.href && !link.href.startsWith(window.location.origin) && !link.href.startsWith('/')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer'); // Important for security
+    }
+  });
+
 });

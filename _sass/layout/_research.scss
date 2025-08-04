@@ -31,13 +31,14 @@
 .media-container {
   margin-top: 20px;
   display: flex;
-  flex-wrap: wrap; /* This is key: allows images to wrap to the next line */
-  gap: 15px;       /* This creates a nice space between all images */
+  flex-wrap: wrap; 
+  gap: 15px;      
 }
 
 .media-container img {
-  flex: 1 1 300px; /* This is the magic: each image will try to be 300px, but can grow or shrink. On a wide screen, you might get 3 in a row. On a narrow screen, they will stack. */
-  max-width: 100%;  /* Ensures images don't overflow their container */
-  height: auto;     /* Maintains aspect ratio */
+  /* THIS IS THE CORRECTED LINE */
+  flex: 1 1 45%;   /* Each image takes up ~45% of the width, allowing two per row */
+  max-width: 100%;  
+  height: auto;     
   display: block;
 }
