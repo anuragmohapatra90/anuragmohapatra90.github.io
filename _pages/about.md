@@ -21,6 +21,7 @@ author_profile: true
 	<p>
 	So, I said goodbye to the great friends I had made and in 2015 I moved again, this time to Munich to study at the Technical University of Munich. Here I found the Chair of Renewable and Sustainable Energy Systems of Prof. Thomas Hamacher and started working with them as a student assistant. 
 	</p>
+	<p>
 	After I finished my master's, Prof. Hamacher offered me a rare PhD opportunity - "There is an empty hall in the basement of this very building. We must convert that into the most unique sector-coupling laboratory in the next five years. Would you like to be a part of this?". I was not alone - a few excellent engineers joined me in this bizarre yet unmissable PhD journey. 
 	</p>
 	<p>
